@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore, Experience, Embrace">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Trending Homes">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Tech Builders</title>
+  <link rel="manifest" href="manifest.json">
+  <script type="application/javascript" src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer></script>
+  <style>
+    /* Loader and Body Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black; /* Black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    #loading {
+      text-align: center;
+    }
+
+    /* Circular Loader */
+    #loader {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-image: conic-gradient(
+        #FB8D48, #ED7136, #C54E47, #C14F49, #9D3863, #5E1F72
+      ) 1;
+      animation: spin 1.5s linear infinite;
+    }
+
+    /* Gradient text */
+    #loadingText {
+      margin-top: 16px;
+      background: linear-gradient(90deg, #FB8D48, #ED7136, #C54E47, #C14F49, #9D3863, #5E1F72);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Spin Animation */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader with Circular Spinner and Gradient Text -->
+  <div id="loading">
+    <div id="loader"></div>
+  </br>
+    <div id="loadingText">Loading...</div>
+  </div>
+
+  <!-- Flutter Initialization Script -->
+  <script>
+      {{flutter_js}}
+      {{flutter_build_config}}
+    const loading = document.getElementById('loading');
+    _flutter.loader.load({
+      onEntrypointLoaded: async function(engineInitializer) {
+        const appRunner = await engineInitializer.initializeEngine();
+        await appRunner.runApp();
+        
+        // Hide loader after Flutter app is loaded
+        loading.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
