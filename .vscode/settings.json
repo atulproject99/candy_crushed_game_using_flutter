@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/Users/atulmaurya/techbuildersprojects/tech_builders/linux"
+    "cmake.sourceDirectory": "/Users/atulmaurya/techbuildersprojects/tech_builders/linux",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

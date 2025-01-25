@@ -7,28 +7,28 @@ import 'app_size.dart';
 
 class AppTheme {
   static TextStyle _w700({required double fontSize, Color? color}) =>
-      GoogleFonts.bricolageGrotesque(
+      GoogleFonts.lilyScriptOne(
         fontSize: fontSize,
         fontWeight: FontWeight.w700,
         color: color,
       );
 
   static TextStyle _w600({required double fontSize, Color? color}) =>
-      GoogleFonts.bricolageGrotesque(
+      GoogleFonts.lilyScriptOne(
         fontSize: fontSize,
         fontWeight: FontWeight.w600,
         color: color,
       );
 
   static TextStyle _w500({required double fontSize, Color? color}) =>
-      GoogleFonts.bricolageGrotesque(
+      GoogleFonts.lilyScriptOne(
         fontSize: fontSize,
         fontWeight: FontWeight.w500,
         color: color,
       );
 
   static TextStyle _w400({required double fontSize, Color? color}) =>
-      GoogleFonts.bricolageGrotesque(
+      GoogleFonts.lilyScriptOne(
         fontSize: fontSize,
         fontWeight: FontWeight.w400,
         color: color,

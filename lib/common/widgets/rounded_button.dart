@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../constants/image_path_constants.dart';
+
 import '../theme/app_colors.dart';
 import '../theme/app_geometry.dart';
 import 'custom_sized_box.dart';
-import 'custom_svg.dart';
+
 import 'custom_text_widget.dart';
 
 class RoundedButton extends StatelessWidget {

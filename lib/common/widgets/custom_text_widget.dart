@@ -211,6 +211,32 @@ class Text16W500 extends StatelessWidget {
   }
 }
 
+class Text18W400 extends StatelessWidget {
+  const Text18W400(
+    this.text, {
+    super.key,
+    this.textAlign,
+    this.maxLines,
+    this.color,
+  });
+
+  final String text;
+  final TextAlign? textAlign;
+  final int? maxLines;
+  final Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      textAlign: textAlign,
+      maxLines: maxLines,
+      style: context.textTheme.bodyLarge!
+          .copyWith(color: color, fontSize: AppSize.size18),
+    );
+  }
+}
+
 class Text16W400 extends StatelessWidget {
   const Text16W400(
     this.text, {
