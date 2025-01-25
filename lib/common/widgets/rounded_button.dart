@@ -69,12 +69,6 @@ class RoundedButton extends StatelessWidget {
                       color: textColor,
                     ),
                     const SBW15(),
-                    CustomSvg(
-                      width: svgWidth,
-                      height: svgHeight,
-                      assetName: SvgImages.arrow,
-                      color: svgColor,
-                    )
                   ],
                 ),
               )),

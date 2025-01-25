@@ -4,15 +4,21 @@ import 'package:go_router/go_router.dart';
 
 import '../common/keys/key.dart';
 
+import '../modules/splash/views/splash_view.dart';
 import 'transition/page_transition.dart';
 
 final routerProvider = Provider<GoRouter>(
   (ref) {
     return GoRouter(
       navigatorKey: AppKeys.navigatorKey,
-      initialLocation: '/',
+      initialLocation: SplashView.path,
       debugLogDiagnostics: true,
-      routes: [],
+      routes: [
+        CustomGoRoute(
+            path: SplashView.path,
+            name: SplashView.name,
+            pageBuilder: (_) => const SplashView())
+      ],
       redirect: (context, state) {
         return null;
       },
